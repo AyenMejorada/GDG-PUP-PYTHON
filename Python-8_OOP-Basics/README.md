@@ -1,4 +1,4 @@
-In this assignment, we learned the basics of Object-Oriented Programming (OOP) in Python. We used the __init__ method to initialize the attributes of a class. It felt similar to how we use structures (struct) in C, but this time it's the Python version with more built-in functionality :D
+My Notes: In this assignment, we learned the basics of Object-Oriented Programming (OOP) in Python. We used the __init__ method to initialize the attributes of a class. It felt similar to how we use structures (struct) in C, but this time it's the Python version with more built-in functionality :D
 
 ---
 
