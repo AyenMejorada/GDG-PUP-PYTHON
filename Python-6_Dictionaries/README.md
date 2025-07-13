@@ -5,54 +5,64 @@ My notes: In this assignment, I created a python dictionary that could add anoth
 Notes from kuya Kyne Laggui:
 ### **Description**
 
-In this assignment, you will learn how to create and work with dictionaries in Python. A dictionary in Python is a collection of key-value pairs, where each key maps to a value. You will practice creating a dictionary, adding items, updating items, and removing items. Dictionaries are a useful data structure when you need to store and access data in a key-based format.
+In this assignment, you will learn how to handle files in Python. You will work with two basic file operations: reading from a file and writing to a file. You will create a Python program that opens a file, reads its contents, and displays it. Additionally, you will practice creating a new file and writing data into it.
 
 ### **Expected Output**
 
 The program should:
 
-1. Create a dictionary with initial key-value pairs.
-2. Add a new key-value pair.
-3. Update an existing key-value pair.
-4. Remove a key-value pair.
-5. Display the dictionary after each operation.
+1. Open a file for reading.
+2. Read the contents of the file.
+3. Display the contents of the file.
+4. Optionally, create a new file and write some content to it.
 
 Example output:
 
 ```
-Original dictionary: {'name': 'Sparky', 'age': 25}
-Dictionary after adding an item: {'name': 'Sparky', 'age': 25, 'city': 'New York'}
-Dictionary after updating an item: {'name': 'Sparky', 'age': 26, 'city': 'New York'}
-Dictionary after removing an item: {'name': 'Sparky', 'city': 'New York'}
+Contents of the file:
+Hello, this is a test file.
+Python file handling is easy and fun!
+
+New file created with content:
+This is a new file, like New Year New Me XD
 ```
 
 ---
 
 ### **Provided Files**
 
-- `main.py` – The Python program that implements dictionary operations.
+- `main.py` – The Python program for file handling operations.
+- `sample.txt` – A sample file with some content for reading.
 
 ---
 
 ### **Instructions**
 
 1. **Program Goal**:
-   - Write a Python program that creates a dictionary and performs the following operations:
-     - Add a new key-value pair using the dictionary's assignment syntax.
-     - Update the value of an existing key.
-     - Remove a key-value pair using the `del` statement or the `pop()` method.
+
+   - Write a Python program that:
+     - Reads the contents of a file and prints it to the console.
+     - Creates a new file and writes content to it.
+
 2. **Steps**:
-   - **Step 1**: Create a dictionary with at least two key-value pairs and print it.
-     - Example dictionary: `{'name': 'Sparky', 'age': 25}`.
-   - **Step 2**: Add a new key-value pair to the dictionary.
-     - Add a `city` key with a value of `'New York'` and print the updated dictionary.
-   - **Step 3**: Update an existing key-value pair.
-     - Update the `age` key to `26` and print the updated dictionary.
-   - **Step 4**: Remove a key-value pair.
-     - Remove the `age` key and print the updated dictionary.
+
+   - **Step 1**: Create a file named `sample.txt` (or use any existing file you have) and add some text to it, such as:
+     ```
+     Hello, this is a test file.
+     Python file handling is easy and fun!
+     ```
+   - **Step 2**: In your Python program, use the `open()` function to open the file in read mode (`'r'`).
+     - Use the `read()` or `readlines()` method to read the contents of the file.
+     - Print the contents of the file to the console.
+   - **Step 3**: Create a new file named `newfile.txt` using the `open()` function in write mode (`'w'`).
+     - Write some content to the file using the `write()` method.
+     - Close the file after writing the content.
+   - **Step 4**: Optionally, read the contents of the newly created file to ensure that the content was written correctly.
+
 3. **Test the Program**:
 
-   - Try different keys and values to ensure each operation works correctly.
+   - Ensure that the program reads the content from `sample.txt` and displays it correctly.
+   - Verify that the program creates a new file (`newfile.txt`) and writes content into it.
 
 4. **Before Reviewing the Provided File**:
    - Try implementing the assignment on your own first.
@@ -62,8 +72,17 @@ Dictionary after removing an item: {'name': 'Sparky', 'city': 'New York'}
 
 ### **Tips**
 
-- In a dictionary, you can access values using keys (e.g., `dictionary[key]`).
-- The `del` statement is used to remove a key-value pair by specifying the key: `del dictionary[key]`.
-- The `pop()` method also removes a key-value pair and returns the value.
-- You can update an item by assigning a new value to an existing key (e.g., `dictionary[key] = new_value`).
-- Try adding, updating, and removing different key-value pairs to see how the dictionary changes.
+- Use `open('filename', 'r')` to open a file for reading, and `open('filename', 'w')` to open a file for writing.
+- The `read()` method reads the entire file, while the `readlines()` method reads each line of the file into a list.
+- Remember to close the file using `file.close()` after reading or writing to ensure resources are properly released.
+- When using write mode (`'w'`), if the file already exists, it will be overwritten.
+- To append to an existing file, use `'a'` mode when opening the file.
+
+---
+
+### **What You Need to Submit**
+
+1. **main.py** – Your Python program that reads from and writes to files.
+2. **README.md** – This file with detailed instructions.
+3. **sample.txt** – A file with sample content (if needed for reading).
+4. **newfile.txt** – The file you created and wrote content to.
